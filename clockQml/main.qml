@@ -6,7 +6,7 @@ Window {
     width: 640
     height: 480
     visible: true
-    title: "clock"
+    title: qsTr("Hello World")
     property var locale: Qt.locale()
     property date currentTime: new Date()
     property real currentHour: currentTime.getHours()%12 +(currentTime.getMinutes()/60) + (currentTime.getSeconds()/60/60)
@@ -49,16 +49,16 @@ Window {
                 text: "1"
                 font.bold: true
                 font.pixelSize: 15
-                x: parent.width/2 - width/2 + 95
-                y: 35
+                x: hour12.x + 0.25*parent.width - 5
+                y: hour12.y + 0.04*parent.height + 5
             }
             Text {
                 id: hour2
                 text: "2"
                 font.bold: true
                 font.pixelSize: 15
-                x: parent.width/2 - width/2 + 158
-                y: 98
+                x: hour3.x - 0.04*parent.width - 8
+                y: hour3.y - 0.25*parent.height + 7
             }
             Text {
                 id: hour3
@@ -73,16 +73,16 @@ Window {
                 text: "4"
                 font.bold: true
                 font.pixelSize: 15
-                x: parent.width - width - 35
-                y: parent.height/2 - height/2  +90
+                x: hour3.x - parent.width*0.04 - 8
+                y: hour3.y + parent.height*0.25 - 7
             }
             Text {
                 id: hour5
                 text: "5"
                 font.bold: true
                 font.pixelSize: 15
-                x: parent.width - width - 92
-                y: parent.height/2 - height/2 + 153
+                x: hour6.x + parent.width*0.25 - 6
+                y: hour6.y - parent.height*0.04 - 6
             }
             Text {
                 id: hour6
@@ -97,16 +97,16 @@ Window {
                 text: "7"
                 font.bold: true
                 font.pixelSize: 15
-                x: 96
-                y: 348
+                x: hour6.x - parent.width*0.25 + 7
+                y: hour6.y - parent.height*0.04 - 6
             }
             Text {
                 id: hour8
                 text: "8"
                 font.bold: true
                 font.pixelSize: 15
-                x: 35
-                y: 278
+                x: hour9.x + parent.width*0.04 + 8
+                y: hour9.y + parent.height*0.25 - 7
             }
             Text {
                 id: hour9
@@ -121,16 +121,16 @@ Window {
                 text: "10"
                 font.bold: true
                 font.pixelSize: 15
-                x: 35
-                y: 110
+                x: hour9.x + parent.width*0.04 + 7
+                y: hour9.y - parent.height*0.25  + 7
             }
             Text {
                 id: hour11
                 text: "11"
                 font.bold: true
                 font.pixelSize: 15
-                x: 95
-                y: 43
+                x: hour12.x - parent.width*0.25 + 7
+                y: hour12.y + parent.height*0.04 + 7
             }
         }
         Item{
